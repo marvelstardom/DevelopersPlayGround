@@ -3,9 +3,11 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import BlogLayout from '~/layouts/Blog.vue'
+import VueDisqus from 'vue-disqus'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   Vue.component('BlogLayout', BlogLayout)
+  Vue.use(VueDisqus)
 }
